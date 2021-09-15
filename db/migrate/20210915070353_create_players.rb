@@ -4,6 +4,7 @@ class CreatePlayers < ActiveRecord::Migration[6.1]
       t.string :uniform_number
       t.string :name
       t.string :player_url
+      t.string :position
 
       t.timestamps
     end
