@@ -1,0 +1,42 @@
+<%= form_with(model: notifing_stat) do |form| %>
+  <% if notifing_stat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(notifing_stat.errors.count, "error") %> prohibited this notifing_stat from being saved:</h2>
+
+      <ul>
+        <% notifing_stat.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :player_id %>
+    <%= form.text_field :player_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kind %>
+    <%= form.text_field :kind %>
+  </div>
+
+  <div class="field">
+    <%= form.label :target %>
+    <%= form.number_field :target %>
+  </div>
+
+  <div class="field">
+    <%= form.label :previous_stat %>
+    <%= form.number_field :previous_stat %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

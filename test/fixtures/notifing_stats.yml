@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  player: one
+  kind: MyString
+  target: 1
+  previous_stat: 1
+
+two:
+  user: two
+  player: two
+  kind: MyString
+  target: 1
+  previous_stat: 1

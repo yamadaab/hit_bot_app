@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @notifing_stat.user_id %>
+</p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @notifing_stat.player_id %>
+</p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @notifing_stat.kind %>
+</p>
+
+<p>
+  <strong>Target:</strong>
+  <%= @notifing_stat.target %>
+</p>
+
+<p>
+  <strong>Previous stat:</strong>
+  <%= @notifing_stat.previous_stat %>
+</p>
+
+<%= link_to 'Edit', edit_notifing_stat_path(@notifing_stat) %> |
+<%= link_to 'Back', notifing_stats_path %>

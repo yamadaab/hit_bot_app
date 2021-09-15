@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Notifing Stats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Player</th>
+      <th>Kind</th>
+      <th>Target</th>
+      <th>Previous stat</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @notifing_stats.each do |notifing_stat| %>
+      <tr>
+        <td><%= notifing_stat.user_id %></td>
+        <td><%= notifing_stat.player_id %></td>
+        <td><%= notifing_stat.kind %></td>
+        <td><%= notifing_stat.target %></td>
+        <td><%= notifing_stat.previous_stat %></td>
+        <td><%= link_to 'Show', notifing_stat %></td>
+        <td><%= link_to 'Edit', edit_notifing_stat_path(notifing_stat) %></td>
+        <td><%= link_to 'Destroy', notifing_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Notifing Stat', new_notifing_stat_path %>
