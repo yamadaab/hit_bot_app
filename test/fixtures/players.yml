@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uniform_number: MyString
+  name: MyString
+  player_url: MyString
+
+two:
+  uniform_number: MyString
+  name: MyString
+  player_url: MyString
