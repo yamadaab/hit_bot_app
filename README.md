@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# hit_botとは
 
-Things you may want to cover:
+野球でお気に入りの選手が大記録達成を目前にすると、気になって何度も公式サイトなどへアクセスして確認する手間を解決したい
+野球が好きな人向けの野球選手の成績通知サービスです。
 
-* Ruby version
+お気に入りの選手を登録し、ヒットの数など好きな記録を選び進捗があるたびに通知を得ることができます。
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+各チームの公式サイトやTwitterとは違って、記録の進捗を確認するために、わざわざサイトへアクセスしなくても進捗があれば通知を受取って知ることができます。
