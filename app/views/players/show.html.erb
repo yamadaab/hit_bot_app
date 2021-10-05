@@ -1,0 +1,10 @@
+<h1><%= @player.name%>選手の記録一覧です。</h1>
+
+<% if @player.pitcher? %>
+  <%= render partial: "pitcher_stats", locals: {pitcher_stat: @player.pitcher_stat} %>
+<% end %>
+
+
+<% if @player.fielder? %>
+
+<% end %>
