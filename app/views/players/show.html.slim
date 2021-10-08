@@ -1,0 +1,6 @@
+.page-body
+  .h1
+    = @player.name + "選手の成績一覧"
+    - if @player.pitcher? 
+      = render "pitcher_stats", pitcher_stat: @player.pitcher_stat
+    - if @player.fielder?

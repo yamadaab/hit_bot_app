@@ -1,0 +1,50 @@
+- if pitcher_stat.games.nil?
+  | この選手にはまだ一軍成績がありません
+- else
+
+  li  = link_to new_notifing_stat_path(player_id: @player.id, kind: "games", previous_stat: pitcher_stat.games) do
+    | 試合数:#{pitcher_stat.games}
+  li  = link_to new_notifing_stat_path(player_id: @player.id, kind: "win_pitchers", previous_stat: pitcher_stat.win_pitchers) do
+    | 勝利:#{pitcher_stat.win_pitchers}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "win_pitchers", previous_stat: pitcher_stat.win_pitchers) do
+    | 敗北:#{pitcher_stat.lost_pitchers}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "win_pitchers", previous_stat: pitcher_stat.win_pitchers) do
+    | セーブ:#{pitcher_stat.saves}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "win_pitchers", previous_stat: pitcher_stat.win_pitchers) do
+    | ホールド:#{pitcher_stat.holds}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "win_pitchers", previous_stat: pitcher_stat.win_pitchers) do
+    | HP:#{pitcher_stat.hold_points}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "win_pitchers", previous_stat: pitcher_stat.win_pitchers) do
+    | 完投:#{pitcher_stat.complete_games}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "win_pitchers", previous_stat: pitcher_stat.win_pitchers) do
+    | 完封勝利:#{pitcher_stat.shut_outs}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "win_pitchers", previous_stat: pitcher_stat.win_pitchers) do
+    | 無四球:#{pitcher_stat.no_base_on_balls}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "win_pitchers", previous_stat: pitcher_stat.win_pitchers) do
+    | 打者:#{pitcher_stat.hitters}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "win_pitchers", previous_stat: pitcher_stat.win_pitchers) do
+    | 投球回:#{pitcher_stat.innings_pitched}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "win_pitchers", previous_stat: pitcher_stat.win_pitchers) do
+    | 被安打:#{pitcher_stat.hits_Allowed}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "win_pitchers", previous_stat: pitcher_stat.win_pitchers) do
+    | 被本塁打:#{pitcher_stat.home_runs_allowed}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "win_pitchers", previous_stat: pitcher_stat.win_pitchers) do
+    | 与四球:#{pitcher_stat.base_on_balls}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "win_pitchers", previous_stat: pitcher_stat.win_pitchers) do
+    | 与死球:#{pitcher_stat.hits_by_pitch}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "win_pitchers", previous_stat: pitcher_stat.win_pitchers) do
+    | 奪三振:#{pitcher_stat.strike_outs}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "win_pitchers", previous_stat: pitcher_stat.win_pitchers) do
+    | 暴投:#{pitcher_stat.wild_pitchs}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "win_pitchers", previous_stat: pitcher_stat.win_pitchers) do
+    | ボーク:#{pitcher_stat.balks}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "win_pitchers", previous_stat: pitcher_stat.win_pitchers) do
+    | 失点:#{pitcher_stat.runs_allowed}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "win_pitchers", previous_stat: pitcher_stat.win_pitchers) do
+    | 自責点:#{pitcher_stat.earned_runs}
+  li 防御率: #{pitcher_stat.earned_runs_average}
+  | (防御率は通知できません。)
+  li whip: #{pitcher_stat.whip}
+  | (whipは通知できません。)
+
+    
