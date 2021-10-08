@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
-  <%= @notifing_stat.user_id %>
-</p>
-
-<p>
   <strong>Player:</strong>
   <%= @notifing_stat.player_id %>
 </p>
@@ -25,5 +20,6 @@
   <%= @notifing_stat.previous_stat %>
 </p>
 
-<%= link_to 'Edit', edit_notifing_stat_path(@notifing_stat) %> |
-<%= link_to 'Back', notifing_stats_path %>
+<%= link_to '編集', edit_notifing_stat_path(@notifing_stat) %> |
+<%= link_to '削除', notifing_stat_path(@notifing_stat), method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to '登録一覧', notifing_stats_path %>

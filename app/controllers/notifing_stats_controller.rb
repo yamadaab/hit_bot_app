@@ -13,6 +13,9 @@ class NotifingStatsController < ApplicationController
   # GET /notifing_stats/new
   def new
     @notifing_stat = NotifingStat.new
+    @player = get_player
+    @kind = get_kind
+    @previous_stat = get_previous_stat
   end
 
   # GET /notifing_stats/1/edit
@@ -65,5 +68,17 @@ class NotifingStatsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def notifing_stat_params
       params.require(:notifing_stat).permit(:user_id, :player_id, :kind, :target, :previous_stat)
+    end
+
+    def get_player
+      @player = Player.find(params[:player_id])
+    end
+
+    def get_kind
+      @kind = params[:kind]
+    end
+
+    def get_previous_stat
+      @previous_stat = params[:previous_stat]
     end
 end

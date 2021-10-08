@@ -1,3 +1,6 @@
+<%= @player.name %>選手の
+現在<%= @player.pitcher_stat.games %>の試合数を
+
 <%= form_with(model: notifing_stat) do |form| %>
   <% if notifing_stat.errors.any? %>
     <div id="error_explanation">
@@ -12,31 +15,28 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.hidden_field :user_id, :value =>  current_user.id %>
   </div>
 
   <div class="field">
-    <%= form.label :player_id %>
-    <%= form.text_field :player_id %>
+    <%= form.hidden_field :player_id, :value =>  @player.id %>
   </div>
 
   <div class="field">
-    <%= form.label :kind %>
-    <%= form.text_field :kind %>
+    <%= form.hidden_field :kind, :value =>  @kind %>
   </div>
 
   <div class="field">
-    <%= form.label :target %>
+    <%= form.label :"目標の成績" %>
     <%= form.number_field :target %>
+    を達成するまで通知を送ります！
   </div>
 
   <div class="field">
-    <%= form.label :previous_stat %>
-    <%= form.number_field :previous_stat %>
+    <%= form.hidden_field :previous_stat, :value =>  @previous_stat %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit value= "登録" %>
   </div>
 <% end %>
