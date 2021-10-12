@@ -29,7 +29,7 @@ class Scraping
   end
 
   def save_player_stat(player)
-    save_pitcher_stat(player) if player.pitcher?     
+    save_pitcher_stat(player) if player.pitcher?
     save_fielder_stat(player) if player.fielder?
   end
 
@@ -116,16 +116,16 @@ private
       RBI: total_result[9],
       stolen_base: total_result[10],
       caught_stealing: total_result[11],
-      sacrifice_flys: total_result[12],
-      base_on_balls: total_result[13],
-      hits_by_pitch: total_result[14],
-      strike_outs: total_result[15],
-      double_play: total_result[16],
-      batting_average: total_result[17],
-      on_base_percentage: total_result[18],
-      slugging_percentage: total_result[19],
-      on_base_plus_slugging: total_result[20],
-      ops: total_result[21]
+      sacrifice_bunts: total_result[12],
+      sacrifice_flys: total_result[13],
+      base_on_balls: total_result[14],
+      hits_by_pitch: total_result[15],
+      strike_outs: total_result[16],
+      double_play: total_result[17],
+      batting_average: total_result[18],
+      on_base_percentage: total_result[19],
+      slugging_percentage: total_result[20],
+      on_base_plus_slugging: total_result[21],
     }
   end
 end

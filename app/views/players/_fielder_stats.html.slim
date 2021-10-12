@@ -1,0 +1,47 @@
+- if fielder_stat.games.nil?
+  | #{@player.name}選手にはまだ一軍成績がありません
+- else
+  li  = link_to new_notifing_stat_path(player_id: @player.id, kind: "games", previous_stat: fielder_stat.games) do
+    | 試合数:#{fielder_stat.games}
+  li  = link_to new_notifing_stat_path(player_id: @player.id, kind: "plate_appearances", previous_stat: fielder_stat.plate_appearances) do
+    | 打席数:#{fielder_stat.plate_appearances}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "at_bats", previous_stat: fielder_stat.at_bats) do
+    | 打数:#{fielder_stat.at_bats}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "runs", previous_stat: fielder_stat.runs) do
+    | 得点:#{fielder_stat.runs}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "hits", previous_stat: fielder_stat.hits) do
+    | 安打:#{fielder_stat.hits}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "two_base_hits", previous_stat: fielder_stat.two_base_hits) do
+    | 二塁打:#{fielder_stat.two_base_hits}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "three_base_hits", previous_stat: fielder_stat.three_base_hits) do
+    | 三塁打:#{fielder_stat.three_base_hits}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "home_runs", previous_stat: fielder_stat.home_runs) do
+    | 本塁打:#{fielder_stat.home_runs}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "base_hit", previous_stat: fielder_stat.base_hit) do
+    | 塁打:#{fielder_stat.base_hit}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "RBI", previous_stat: fielder_stat.RBI) do
+    | 打点:#{fielder_stat.RBI}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "stolen_base", previous_stat: fielder_stat.stolen_base) do
+    | 盗塁:#{fielder_stat.stolen_base}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "caught_stealing", previous_stat: fielder_stat.caught_stealing) do
+    | 盗塁刺:#{fielder_stat.caught_stealing}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "sacrifice_bunts", previous_stat: fielder_stat.sacrifice_bunts) do
+    | 犠打:#{fielder_stat.sacrifice_bunts}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "sacrifice_flys", previous_stat: fielder_stat.sacrifice_flys) do
+    | 犠飛:#{fielder_stat.sacrifice_flys}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "base_on_balls", previous_stat: fielder_stat.base_on_balls) do
+    | 四球:#{fielder_stat.base_on_balls}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "hits_by_pitch", previous_stat: fielder_stat.hits_by_pitch) do
+    | 死球:#{fielder_stat.hits_by_pitch}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "strike_outs", previous_stat: fielder_stat.strike_outs) do
+    | 三振:#{fielder_stat.strike_outs}
+  li = link_to link_to new_notifing_stat_path(player_id: @player.id, kind: "double_play", previous_stat: fielder_stat.double_play) do
+    | 併殺打:#{fielder_stat.double_play}
+  li 打率: #{fielder_stat.batting_average}
+  | (打率は通知できません。)
+  li 出塁率: #{fielder_stat.on_base_percentage}
+  | (出塁率は通知できません。)
+  li 長打率: #{fielder_stat.slugging_percentage}
+  | (長打率は通知できません。)
+  li OPS: #{fielder_stat.on_base_plus_slugging}
+  | (OPSは通知できません。)
