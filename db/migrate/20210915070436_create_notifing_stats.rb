@@ -6,8 +6,6 @@ class CreateNotifingStats < ActiveRecord::Migration[6.1]
       t.string :kind
       t.integer :target
       t.integer :previous_stat
-      t.integer :latest_updated_value
-      t.boolean :mail, default: false, null: false
 
       t.timestamps
     end

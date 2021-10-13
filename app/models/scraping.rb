@@ -13,7 +13,7 @@ class Scraping
 
       doc.xpath('//table[@id="tbl"]/tbody/*').each do |tr|
         Player.create!(
-          position: tr.children[5].content, 
+          position: tr.children[5].content,
           uniform_number: tr.children[1].content,
           name: tr.children[3].content,
           player_url: tr.children[3].children.first.attributes["href"].value
@@ -125,7 +125,7 @@ private
       batting_average: total_result[18],
       on_base_percentage: total_result[19],
       slugging_percentage: total_result[20],
-      on_base_plus_slugging: total_result[21],
+      on_base_plus_slugging: total_result[21]
     }
   end
 end
